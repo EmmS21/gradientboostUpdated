@@ -1,0 +1,289 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="{% static 'img/favicon-transparent.png' %}" type="image/png">
+	<title>Gradient Boost</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="{% static 'third/css/bootstrap.css' %}">
+	<link rel="stylesheet" href="{% static 'third/vendors/linericon/style.css' %}">
+	<link rel="stylesheet" href="{% static 'third/css/font-awesome.min.css' %}">
+	<link rel="stylesheet" href="{% static 'third/vendors/owl-carousel/owl.carousel.min.css' %}">
+	<link rel="stylesheet" href="{% static 'third/vendors/lightbox/simpleLightbox.css' %}">
+	<link rel="stylesheet" href="{% static 'third/vendors/nice-select/css/nice-select.css' %}">
+	<link rel="stylesheet" href="{% static 'third/vendors/animate-css/animate.css' %}">
+	<!-- main css -->
+	<link rel="stylesheet" href="{% static 'third/css/style.css' %}">
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-65796754-4"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-65796754-4');
+	</script>
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Hind:300,400');
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Hind', sans-serif;
+  background: #fff;
+  color: #4d5974;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 4rem;
+  width: 100%;
+  padding-top: 30px;
+}
+
+h3 {
+  font-size: 1.75rem;
+  color: #373d51;
+  padding: 1.3rem;
+  margin: 0;
+}
+
+.accordion a {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem 3rem 1rem 1rem;
+  color: #7288a2;
+  font-size: 1.15rem;
+  font-weight: 400;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.accordion a:hover,
+.accordion a:hover::after {
+  cursor: pointer;
+  color: #03b5d2;
+}
+
+.accordion a:hover::after {
+  border: 1px solid #03b5d2;
+}
+
+.accordion a.active {
+  color: #03b5d2;
+  border-bottom: 1px solid #03b5d2;
+}
+
+.accordion a::after {
+  font-family: 'Ionicons';
+  content: '\f218';
+  position: absolute;
+  float: right;
+  right: 1rem;
+  font-size: 1rem;
+  color: #7288a2;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 1px solid #7288a2;
+  text-align: center;
+}
+
+.accordion a.active::after {
+  font-family: 'Ionicons';
+  content: '\f209';
+  color: #03b5d2;
+  border: 1px solid #03b5d2;
+}
+
+.accordion .content {
+  opacity: 0;
+  padding: 0 1rem;
+  max-height: 0;
+  border-bottom: 1px solid #e5e5e5;
+  overflow: hidden;
+  clear: both;
+  -webkit-transition: all 0.2s ease 0.15s;
+  -o-transition: all 0.2s ease 0.15s;
+  transition: all 0.2s ease 0.15s;
+}
+
+.accordion .content p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.accordion .content.active {
+  opacity: 1;
+  padding: 1rem;
+  max-height: 100%;
+  -webkit-transition: all 0.35s ease 0.15s;
+  -o-transition: all 0.35s ease 0.15s;
+  transition: all 0.35s ease 0.15s;
+}
+</style>
+<body>
+
+    <!--================ End Instructor Area =================-->
+    <div class="container">
+        <header class="header_area">
+            <div class="header-top">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-sm-6 col-4 header-top-left">
+                            <a href="mailto:support@colorlib.com">
+                                <span class="lnr lnr-envelope"></span>
+                                <span class="text">
+                                    <span class="text">emmanuels@thegradientboost.com</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-8 header-top-right">
+                            <a href="{% url 'home' %}" class="text-uppercase">Home</a>
+                            <a href="{% url 'signup' %}" class="text-uppercase">Enroll</a>
+                            <a href="{% url 'login' %}" class="text-uppercase">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        </br></br>
+        <center><h2>Frequently Asked Questions</h2></center>
+        <div class="accordion">
+            <div class="accordion-item">
+                <a>Do I have to pay the full fee?</a>
+                <div class="content">
+                    <p>You have the option to pay the fee in full. However we are also offering students the option to pay the fee in 4 equal monthly installments</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <a>Do you get a certificate for completing the course?</a>
+                <div class="content">
+                    <p>Yes, we have written a blog outlining our thought process around certificates. In short you will get a certificate. This will be based upon successfully completing your case studies and projects. Your work and certificate will be reviewed by atleast 4 data scientists. They sill then sign off your certificate with a brief commentary on the standards of the work you produced.</p>
+                    <p>Visit our blog for more information: https://medium.com/gradientboost/do-we-offer-students-certificates-upon-completion-55fff028090a</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <a>Do I need internet access for this course?</a>
+                <div class="content">
+                    <p>Yes, unfortunately this is an online only course, you will need working internet access to work through the course content, complete your projects and case studies and communicate with your mentor.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <a>Is this a full time course?</a>
+                <div class="content">
+                    <p>No, the course is self-paced to cater for learners with other commitments whether work or otherwise.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <a>Am I guaranteed to get a job or internship after completing this course?</a>
+                <div class="content">
+                    <p>No, this is an introductory course, we cannot promise that completing this source will guarantee you a job or internship in the data science space. However, we will help you start building a data science portfolio through case studies and projects.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <a>Who is eligible for this course?</a>
+                <div class="content">
+                    <p>Anyone with a working internet connection, a laptop and an eagerness to learn data science from any African country.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <a>When will I be required to pay for the course?</a>
+                <div class="content">
+                    <p>You will be required to pay after completing the signup and receiving an email with more information about payments and the next steps.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <a>Why does the signup form ask me when you would like to get in touch with me?</a>
+                <div class="content">
+                    <p>We will be getting in touch with you upon completion of the signup form. We will use this opportunity to explain the structure of the course and answer any questions you may have</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+	<df-messenger
+			chat-icon="https://i.ibb.co/MVB0PcX/favicon-large-v1-1-removebg.png"
+			intent="WELCOME"
+			chat-title="TheGradientBoostBot"
+			agent-id="3de06937-2e46-47f5-b250-a2a5bcc63786"
+			language-code="en">
+	</df-messenger>
+
+    <!--================ End Testimonial Area =================-->
+
+<!--    &lt;!&ndash;================ Start footer Area  =================&ndash;&gt;-->
+<!--    <footer class="footer-area section_gap">-->
+<!--        <div class="container">-->
+<!--            <div class="row footer-bottom d-flex justify-content-between">-->
+<!--                <p class="col-lg-8 col-sm-12 footer-text m-0 text-white"><strong>Built by <a href="http://hooros.co.za/">Hooros Digital</a></strong> GradientBoost &copy; Copyright 2020</p>-->
+<!--                <div class="col-lg-4 col-sm-12 footer-social">-->
+<!--					<a href="https://www.facebook.com/thegradientboost/"><i class="fa fa-facebook"></i></a>-->
+<!--					<a href="https://twitter.com/gradient_the"><i class="fa fa-twitter"></i></a>-->
+<!--					<a href="https://www.linkedin.com/company/37551624/"><i class="fa fa-linkedin"></i></a>-->
+<!--                    <a href="https://www.instagram.com/the_gradient_boost/"><i class="fa fa-instagram"></i></a>-->
+<!--                    <a href="https://www.youtube.com/channel/UC329k8dt-DbfbUINUKjtr8A?view_as=subscriber"><i class="fa fa-youtube"></i></a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </footer>-->
+    <!--================ End footer Area  =================-->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="{% static 'third/js/jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static 'third/js/popper.js' %}"></script>
+	<script src="{% static 'third/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'third/js/stellar.js' %}"></script>
+	<script src="{% static 'third/js/countdown.js' %}"></script>
+	<script src="{% static 'third/vendors/nice-select/js/jquery.nice-select.min.js' %}"></script>
+	<script src="{% static 'third/vendors/owl-carousel/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'third/js/owl-carousel-thumb.min.js' %}"></script>
+	<script src="{% static 'third/js/jquery.ajaxchimp.min.js' %}"></script>
+	<script src="{% static 'third/vendors/counter-up/jquery.counterup.js' %}"></script>
+	<script src="{% static 'third/js/mail-script.js' %}"></script>
+	<!--gmaps Js-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+	<script src="{% static 'third/js/gmaps.min.js' %}"></script>
+	<script src="{% static 'third/js/theme.js' %}"></script>
+<script>
+    const items = document.querySelectorAll(".accordion a");
+
+function toggleAccordion(){
+  this.classList.toggle('active');
+  this.nextElementSibling.classList.toggle('active');
+}
+
+items.forEach(item => item.addEventListener('click', toggleAccordion));
+</script>
+</body>
+
+</html>

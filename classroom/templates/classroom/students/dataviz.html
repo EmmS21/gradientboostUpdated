@@ -1,0 +1,135 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Gradient Boost</title>
+    <link rel="icon" href="{% static 'second/images/learningmaterial/favicon.ico' %}">
+	<link rel="stylesheet" href="{% static 'second/css/app/book.css' %}">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"/>
+	<script src="https://cdn.jsdelivr.net/npm/scrollwatch@2.0.1/dist/ScrollWatch-2.0.1.min.js"></script>
+	<script src="{% static 'second/js/app/book.js' %}" defer></script>
+</head>
+</br>
+<div data-scroll-watch><center><img src="{% static 'third/img/logo.png' %}" width="50%"></center></div></br></br></br></br>
+</br></br><div data-scroll-watch><h1>Data Visualization</h1></div></br></br>
+</br></br><div data-scroll-watch>Your data is only as good as your ability to understand and
+    communicate it effectively to your target audience. This is a major
+    reason why choosing the right visualization is essential.</div></br></br>
+</br></br><div data-scroll-watch>If your data is misrepresented or presented ineffectively, key
+    insights and understanding are lost, which hurts your message. In
+    the next few slides we will be presenting tips and tricks to help you
+    choose the right presentation for your data.</div></br></br>
+</br></br><div data-scroll-watch><h2>Finding the story in your data</h2></div></br></br>
+</br></br><div data-scroll-watch>Information can be visualized in a number of ways, each of which can provide a specific
+    insight. When you start to work with your data, it’s important to identify and understand the
+    story you are trying to tell and the relationship you are looking to show. Knowing this
+    information will help you select the proper visualization to best deliver your message.</div></br></br>
+</br></br><div data-scroll-watch>When analyzing data, search for patterns or interesting insights that can be a good starting
+    place for finding your story, such as:</div></br></br>
+</br></br><div data-scroll-watch><img src="{% static 'second/images/learningmaterial/dataviz.PNG' %}" width="50%"></div></br></br>
+</br></br><div data-scroll-watch><h2>Ask the right questions</h2></div></br></br>
+</br></br><div data-scroll-watch>In most cases you will be creating visualizations for an audience. This audience may have
+    pre-existing questions that need to be addressed and answered by your visualization to guide
+    decision making. Keep these questions in mind when creating your visualizations:</div></br></br>
+</br></br><div data-scroll-watch><ul>
+    <li>What questions do you want to answer?</li>
+    <li>What is the problem you are trying to solve?</li>
+    <li>What decisions are you trying to make?</li>
+    <li>What outcomes are you hoping for?</li>
+    <li>What story do you want to tell?</li>
+    <li>What are the actionable insights for your audience?</li>
+</ul>
+</div></br></br>
+</br></br><div data-scroll-watch><h2>Know your Data</h2></div></br></br>
+</br></br><div data-scroll-watch>Let’s go back to our example, we still want to know the average amount of hours teengers in South Africa spend playing Fortnite a day. If we take a large enough sample size that is representative of the population we should typically be able to get an estimate that is close enough to the actual average.
+    The difference between the quantity we want to know (the average hours a day teenagers spend playing Fortnite in South Africa) and the estimation through our sample.</div></br></br>
+</br></br><div data-scroll-watch>Before understanding visualizations, you must understand the types of data that can be visualized and their relationships to each other.
+    Here are some of the most common you are likely to encounter:</div></br></br>
+</br></br><div data-scroll-watch><center><img src="{% static 'second/images/learningmaterial/quantitative.PNG' %}" width="75%"></center></br>
+    <strong>Quantitative:</strong> Data that can be counted or measured; all values are numerical.
+</div></br></br>
+</br></br><div data-scroll-watch><center><img src="{% static 'second/images/learningmaterial/discrete.PNG' %}" width="75%"></center></br>
+    <strong>Discrete:</strong> Numerical data that has a finite number of possible values. Example: Number of employees in the office.
+</div></br></br>
+</br></br><div data-scroll-watch><center><img src="{% static 'second/images/learningmaterial/continuous.PNG' %}" width="75%"></center></br>
+    <strong>Continuous:</strong>Data that is measured and has a value within a range. Example: Rainfall in a year
+</div></br></br>
+</br></br><div data-scroll-watch><center><img src="{% static 'second/images/learningmaterial/categorical.PNG' %}" width="75%"></center></br>
+    <strong>Categorical:</strong> Data that can be sorted according to group or category. Example: Types of products sold.</strong>
+</div></br></br>
+</br></br><div data-scroll-watch><h2>What does bad Data Visualization look like?</h2></div></br></br>
+</br></br><div data-scroll-watch><h2>Consider this chart hideous?</h2></div></br></br>
+</br></br><div data-scroll-watch><img src="{% static 'second/images/learningmaterial/hideous.PNG' %}" width="75%"></div></br></br>
+</br></br><div data-scroll-watch><strong>Why?</strong></div></br></br>
+</br></br><div data-scroll-watch><img src="{% static 'second/images/learningmaterial/whyhideous.PNG' %}" width="75%"></div></br></br>
+</br></br><div data-scroll-watch><h2>Consider this chart hideous?</h2></div></br></br>
+</br></br><div data-scroll-watch><img src="{% static 'second/images/learningmaterial/otherchart.PNG' %}" width="75%"></div></br></br>
+</br></br><div data-scroll-watch><strong>Why?</strong></div></br></br>
+</br></br><div data-scroll-watch><img src="{% static 'second/images/learningmaterial/secondchart.PNG' %}" width="75%"></div></br></br>
+</br></br><div data-scroll-watch><strong>Each step is necessary in producing high quality data visualization</strong></br></br>
+    <center><img src="{% static 'second/images/learningmaterial/timespent.png' %}" width="75%"></center>
+</div></br></br>
+</br></br><div data-scroll-watch><h2>Ben Jones provides a good evaluation guide for data visualization</h2></div></br></br>
+</br></br><div data-scroll-watch><center><img src="{% static 'second/images/learningmaterial/benjones.PNG' %}" width="75%"></center></div></br></br>
+</br></br><div data-scroll-watch>You can follow these simple rules to visualize insights with impact:</div></br></br>
+</br></br><div data-scroll-watch><img src="{% static 'second/images/learningmaterial/one.png' %}" width="100%"></div></br></br>
+</br></br><div data-scroll-watch>What does this mean?</div></br></br>
+</br></br><div data-scroll-watch>This means minimizing distractions depending on the chart you are using</br></br>
+    <img src="{% static 'second/images/learningmaterial/descriptions.png' %}" width="100%"></div></br></br>
+</br></br><div data-scroll-watch><center><img src="{% static 'second/images/learningmaterial/correctchart.PNG' %}" width="75%"></center></div></br></br>
+</br></br><div data-scroll-watch><center><img src="{% static 'second/images/learningmaterial/wrongchart.PNG' %}" width="75%"></center></div></br></br>
+</br></br><div data-scroll-watch><h2>Highlight your message and eliminate distractions</h2></br>
+    <center><img src="{% static 'second/images/learningmaterial/juxtaposed.PNG' %}" width="75%"></center>
+</div></br></br>
+</br></br><div data-scroll-watch>Follow some of these basic rules to ensure type legibility:</br></br>
+    <center><img src="{% static 'second/images/learningmaterial/typelegibility.PNG' %}" width="75%"></center>
+</div></br></br>
+</br></br><div data-scroll-watch><h2>Use the right visual for the right purpose</h2></br></br>
+    <center><img src="{% static 'second/images/learningmaterial/chartplot.png' %}" width="75%"></center>
+</div></br></br>
+</br></br><div data-scroll-watch><img src="{% static 'second/images/learningmaterial/two.PNG' %}" width="100%"></div></br></br>
+</br></br><div data-scroll-watch><center><img src="{% static 'second/images/learningmaterial/datavisuals.PNG' %}" width="75%"></center>
+    </br><small style="font-size:xx-small">Source: <a href="http://www.informationisbeautiful.net/2010/peak-break-up-times-on-facebook/">Peak break-up times on Facebook</a></small>
+</div></br></br>
+</br></br><div data-scroll-watch><center><img src="{% static 'second/images/learningmaterial/wrongpicture.PNG' %}" width="75%"></center></div></br></br>
+</br></br><div data-scroll-watch><h2>Use visual cues to help lead your audience through your insight</h2></div></br></br>
+</br></br><div data-scroll-watch><center><img src="{% static 'second/images/learningmaterial/juxtaposedtwo.PNG' %}" width="75%"></center></br>
+    <small style="font-size:xx-small">Source: <a href="http://blow.blogs.nytimes.com/2010/07/28/chart-abuse/">Chart Abuse</a></small>
+</div></br></br>
+</br></br><div data-scroll-watch><img src="{% static 'second/images/learningmaterial/three.PNG' %}" width="100%"></div></br></br>
+</br></br><div data-scroll-watch><h2>Use contrast; size, color to capture the reader’s attention</h2></br></br>
+    <center><img src="{% static 'second/images/learningmaterial/juxtaposedthree.PNG' %}" width="75%"></center>
+</div></br></br>
+</br></br><div data-scroll-watch><h2>Data visualization design tips</h2></div></br></br>
+</br></br><div data-scroll-watch>Let’s look at a few tips to help improve your data visualization skills</div></br></br>
+</br></br><div data-scroll-watch><strong>Follow these rules when using bold text in data visuals</strong></br></div></br></br>
+</br></br><div data-scroll-watch><center><img src="{% static 'second/images/learningmaterial/ruleone.PNG' %}" width="75%"></center></div></br></br>
+</br></br><div data-scroll-watch><center><img src="{% static 'second/images/learningmaterial/ruletwo.PNG' %}" width="75%"></center></div></br></br>
+</br></br><div data-scroll-watch><center><img src="{% static 'second/images/learningmaterial/rulethree.PNG' %}" width="75%"></center></div></br></br>
+</br></br><div data-scroll-watch><center><img src="{% static 'second/images/learningmaterial/rulefour.PNG' %}" width="75%"></center></div></br></br>
+</br></br><div data-scroll-watch>Pie charts are not always an ideal visual format complex data</br></br>
+    <center><img src="{% static 'second/images/learningmaterial/rulefive.PNG' %}" width="75%"></center>
+</div></br></br>
+</br></br><div data-scroll-watch>Care must be taken when designing proportional pies</br></br>
+    <center><img src="{% static 'second/images/learningmaterial/rulesix.PNG' %}" width="75%"></center>
+</div></br></br>
+</br></br><div data-scroll-watch><center><img src="{% static 'second/images/learningmaterial/ruleseven.PNG' %}" width="75%"></center></div></br></br>
+</br></br><div data-scroll-watch>Line charts should strive for clean lines, clear signals</br></br>
+
+</div></br></br>
+</br></br><div data-scroll-watch><center><img src="{% static 'second/images/learningmaterial/ruleeight.PNG' %}" width="75%"></center></div></br></br>
+</br></br><div data-scroll-watch>Legends, labels should simplify charts, not complicate</br></br>
+    <center><img src="{% static 'second/images/learningmaterial/rulenine.PNG' %}" width="75%"></center>
+</div></br></br>
+</br></br><div data-scroll-watch><h2>Follow these rules when creating Bar Chart data visuals</h2></div></br></br>
+</br></br><div data-scroll-watch><center><img src="{% static 'second/images/learningmaterial/ruleten.PNG' %}" width="75%"></center></div></br></br>
+</br></br><div data-scroll-watch>Icons can be effective when chosen carefully</br></br></div></br></br>
+</br></br><div data-scroll-watch><center><img src="{% static 'second/images/learningmaterial/iconchart.PNG' %}" width="75%"></center></div></br></br>
+</br></br><div data-scroll-watch><h2>Here are some tests you can use to improve your design</h2></div></br></br>
+</br></br><div data-scroll-watch><img src="{% static 'second/images/learningmaterial/thetests.PNG' %}" width="100%"></div></br></br>
+</br></br><div data-scroll-watch><h2>Remember this when you are creating a visualization</h2></div></br></br>
+</br></br><div data-scroll-watch><img src="{% static 'second/images/learningmaterial/finalchart.PNG' %}" width="100%"></div></br></br>
+</br></br><div data-scroll-watch><h3><a href="https://www.dropbox.com/s/da6ll8k3i3ttsad/DataVisualization-1.zip?dl=0" class="btn btn-primary btn-lg btn-block">Here is an exercise to give you more practice</a></h3></div></br></br>
+<div data-scroll-watch><h3><a href="{% url 'students:app-student-dashboard' %}" class="btn btn-primary btn-lg btn-block">Back to your Dashboard</a></h3></div>
+</html>

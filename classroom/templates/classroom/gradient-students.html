@@ -1,0 +1,404 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="{% static 'img/favicon-transparent.png' %}" type="image/png">
+	<title>Gradient Boost</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="{% static 'third/css/bootstrap.css' %}">
+	<link rel="stylesheet" href="{% static 'third/vendors/linericon/style.css' %}">
+	<link rel="stylesheet" href="{% static 'third/css/font-awesome.min.css' %}">
+	<link rel="stylesheet" href="{% static 'third/vendors/owl-carousel/owl.carousel.min.css' %}">
+	<link rel="stylesheet" href="{% static 'third/vendors/lightbox/simpleLightbox.css' %}">
+	<link rel="stylesheet" href="{% static 'third/vendors/nice-select/css/nice-select.css' %}">
+	<link rel="stylesheet" href="{% static 'third/vendors/animate-css/animate.css' %}">
+	<!-- main css -->
+	<link rel="stylesheet" href="{% static 'third/css/style.css' %}">
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-65796754-4"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-65796754-4');
+	</script>
+    <style>
+        .panel{width:100%;position:relative;height:100%;}
+        .panel .front{
+            width:220px;
+            height:200px;
+            margin:10px;
+            position:relative;
+            top:0px;
+            left:0px;
+            border: 1px solid #ccc;
+            text-align: center;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+            -webkit-transform: rotateX(0) rotateY(0);
+            transform: rotateX(0) rotateY(0);
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+            margin-left: 20px;
+            }
+        .panel .back{
+            width:220px;
+            height:200px;
+            margin:10px;
+            position:relative;
+            top:-150px;
+            left: 10px;
+            border: 1px solid #ccc;
+            text-align: center;
+            -webkit-transform: rotateY(-179deg);
+            transform: rotateY(-179deg);
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+            }
+        .panel.flip .front{ transform: rotateY(179deg) }
+        .panel.flip .back{ -webkit-transform: rotateX(0) rotateY(0); }
+        .panel {
+            -webkit-perspective: 800px;
+            perspective: 800px;
+            }
+        .swing .front,
+        .swing .back {
+            width: 140px;
+            top:-50px;
+            -webkit-transition-duration: 1s;
+            transition-duration: 1s;
+            -webkit-transform-origin: 170px 0;
+            transform-origin: 170px 0;
+            }
+        .swing .front {
+            -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+            }
+        .swing .back {
+            -webkit-transform: rotateY(-180deg) translateX(198px) translateZ(2px);
+            transform: rotateY(-180deg) translateX(198px) translateZ(2px);
+            }
+        .swing.flipswing .front {
+            -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+            }
+        .swing.flipswing .back {
+            -webkit-transform: rotateY(0) translateX(198px) translateZ(2px);
+            transform: rotateY(0) translateX(198px) translateZ(2px);
+            }
+        .col-lg-2 {
+            padding: 50px;
+            }
+    </style>
+
+<body>
+
+    <!--================ Start Header Menu Area =================-->
+    <header class="header_area">
+		<div class="header-top">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-6 col-sm-6 col-4 header-top-left">
+						<a href=#>
+							<span class="lnr lnr-envelope"></span>
+							<span class="text">
+								<span class="text">emmanuels@thegradientboost.com</span>
+							</span>
+						</a>
+					</div>
+					<div class="col-lg-6 col-sm-6 col-8 header-top-right">
+						<a href="https://techmentor.typeform.com/to/PpUG1P" class="primary-btn text-uppercase enroll">Enroll Today</a>
+<!--						<a href="{% url 'signup' %}" class="text-uppercase">Enroll</a>-->
+                        <a href="{% url 'login' %}" class="text-uppercase">Login</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="main_menu">
+
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+                    <img src="{% static 'second/images/learning-logo-transparent.png' %}" width="20%">
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+						<ul class="nav navbar-nav menu_nav ml-auto">
+                            <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="{%url 'about' %}">How it Works</a></li> <!--{url 'about'}-->
+                            <li class="nav-item"><a class="nav-link" href="{% url 'course_details' %}"> About the Course</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://medium.com/gradientboost"> Blog</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://learningdesk.thegradientboost.com/">Learning Desk</a></li>
+							<li class="nav-item"><a class="nav-link" href="{% url 'faqs' %}">FAQs</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+    <!--================ End Header Menu Area =================-->
+
+    <!--================Home Banner Area =================-->
+    <section class="banner_area">
+        <div class="banner_inner d-flex align-items-center">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="banner_content text-center">
+                            <h2>Meet our Students</h2>
+                            <p>Learn more about our mentors.</p>
+                            <div class="page_link">
+                                <a href="{% url 'home' %}">Home</a>
+                                <a href="https://techmentor.typeform.com/to/PpUG1P">Enroll</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================End Home Banner Area =================-->
+
+    <!--================ Start Instructor Area =================-->
+    <div class="instructors_area lite_bg">
+        <div class="container" style="width:1200px">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="main_title">
+                        <h2>Meet the Students</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="width:100%;left:0;top:0;margin:0;padding:0;">
+                <!-- single-instructor -->
+                <div class="col-lg-2" style="margin:25px;">
+                    <div class="hover panel">
+                        <div class="front">
+                            <div class="single_instructor">
+                                <div class="author">
+                                    <img src="{% static 'second/images/people/students/benjamin.jpg' %}" style="max-width:75%;max-height:75%;" alt="">
+                                </div>
+                                <div class="author_decs">
+                                    <h4>Benjamin Uneh</h4><br>
+                                    <p class="profession">Business Development Officer</p>
+                                    <p>Nigeria</p>
+                                    <p>May 2020 Introduction to DS cohort</p>
+                                    <div class="social_icons">
+                                        <center><a href="https://www.linkedin.com/in/benjamin-uneh-9656a815a/"><i class="fa fa-linkedin"></i></a></center>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="single_instructor">
+                                <div class="author_decs">
+                                    <p>Benjamin is a Business Development Officer at OPay. Benjamin has an academic background in Educational Technology.</p>
+                                    <p> Country: Nigeria</p>
+                                    <div class="social_icons">
+                                        <a href="https://www.linkedin.com/in/benjamin-uneh-9656a815a/"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- single-instructor -->
+                <div class="col-lg-2" style="margin:25px;">
+                    <div class="hover panel">
+                        <div class="front">
+                            <div class="single_instructor">
+                                <div class="author">
+                                    <img src="{% static 'second/images/people/students/ritmwa.jpg' %}" style="max-width:75%;max-height:75%;" alt="">
+                                </div>
+                                <div class="author_decs">
+                                    <h4>Ritmwa Bewarang</h4><br>
+                                    <p class="profession">Student at the University of Jos</p>
+                                    <p>Nigeria</p>
+                                    <p>May 2020 Introduction to DS cohort</p>
+                                    <div class="social_icons">
+                                        <center><a href="https://www.linkedin.com/in/ritmwa-bewarang-ba1543174/"><i class="fa fa-linkedin"></i></a></center>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="single_instructor">
+                                <div class="author_decs">
+                                    <p>Ritmwa Bewarang is a student at the University of Jos where she is currently pursuing a Bachelor of Science in Quantity Surveying.</p>
+                                    <p> Country: Nigeria</p>
+                                    <div class="social_icons">
+                                        <a href="https://www.linkedin.com/in/ritmwa-bewarang-ba1543174/"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- single-instructor -->
+                <div class="col-lg-2" style="margin:25px;">
+                    <div class="hover panel">
+                        <div class="front">
+                            <div class="single_instructor">
+                                <div class="author">
+                                    <img src="{% static 'second/images/people/students/akinloye.jpg' %}" style="max-width:75%;max-height:75%;" alt="">
+                                </div>
+                                <div class="author_decs">
+                                    <h4>Akinloye Okunola</h4><br>
+                                <p>May 2020 Introduction to DS cohort</p>
+                                    <div class="social_icons">
+                                        <center><a href="https://www.linkedin.com/in/akinloye-okunola-279695191/"><i class="fa fa-linkedin"></i></a></center>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="single_instructor">
+                                <div class="author_decs">
+                                    <p>Akinloye Okunola is a Social Media Manager at Laifmedia. He completed a Bachelor of Science in Business Administration and Management at the University of Lagos.</p>
+                                    <p>Ajibola is working towards transitioning to a Data Analyst.</p>
+                                    <p> Country: Nigeria</p>
+                                    <div class="social_icons">
+                                        <a href="https://www.linkedin.com/in/akinloye-okunola-279695191/"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 " style="margin:25px;">
+                    <div class="hover panel">
+                        <div class="front">
+                            <div class="single_instructor">
+                                <div class="author">
+                                    <img src="{% static 'second/images/people/students/ajibola.jpg' %}" style="max-width:75%;max-height:75%;" alt="">
+                                </div>
+                                <div class="author_decs">
+                                    <h4>Ajibola Lawal</h4><br>
+                                    <p class="profession">Data Science Intern</p>
+                                    <p>Nigeria</p>
+                                    <p>May 2020 Introduction to DS cohort</p>
+                                    <div class="social_icons">
+                                        <a href="https://www.linkedin.com/in/jibzus/"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="single_instructor">
+                                <div class="author_decs">
+                                    <p>Ajibola Lawal has a background in Computer Science and is currenlty an Intern Data Scientist at Lisabi Technologies.</p>
+                                    <p>Ajibola previously worked as a Senior Strategy Associate and Product Team Lead at North East Children's Trust and Abalon Sports Multiservices respectively</p>
+                                    <div class="social_icons">
+                                        <a href="https://www.linkedin.com/in/jibzus/"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2" style="margin:25px;">
+                    <div class="hover panel">
+                        <div class="front">
+                            <div class="single_instructor">
+                                <div class="author">
+                                    <img src="{% static 'second/images/people/students/gershinen.jpg' %}" style="max-width:75%;max-height:75%;" alt="">
+                                </div>
+                                <div class="author_decs">
+                                    <h4>Gershinen Shanding</h4><br>
+                                    <p class="profession">Youth Corps</p>
+                                    <p>Nigeria</p>
+                                    <p>May 2020 Introduction to DS cohort</p>
+                                    <div class="social_icons">
+                                        <a href="https://www.linkedin.com/in/pgshanding/detail/background-image/"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="single_instructor">
+                                <div class="author_decs">
+                                    <p>Gershinen Shanding recently completed a BSc in Computer Science a course on Scientific computing and Python for Data Science through the WorldQuant University.</p>
+                                    <p>Gershinen currently works as Youth Corp at the University of Abuja Teaching Hospital</p>
+                                    <div class="social_icons">
+                                        <a href="https://www.linkedin.com/in/pgshanding/detail/background-image/"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--================ End Instructor Area =================-->
+
+    <!--================ Frequently Asked Questions =================-->
+
+    <!--================ Start footer Area  =================-->
+    <footer class="footer-area section_gap">
+        <div class="container">
+            <div class="row footer-bottom d-flex justify-content-between">
+                <p class="col-lg-8 col-sm-12 footer-text m-0 text-white"><strong>Built by <a href="http://hooros.co.za/">Hooros Digital</a></strong> GradientBoost &copy; Copyright 2020</p>
+                <div class="col-lg-4 col-sm-12 footer-social">
+					<a href="https://www.facebook.com/thegradientboost/"><i class="fa fa-facebook"></i></a>
+					<a href="https://twitter.com/gradient_the"><i class="fa fa-twitter"></i></a>
+					<a href="https://www.linkedin.com/company/37551624/"><i class="fa fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/the_gradient_boost/"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/channel/UC329k8dt-DbfbUINUKjtr8A?view_as=subscriber"><i class="fa fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--================ End footer Area  =================-->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="{% static 'third/js/jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static 'third/js/popper.js' %}"></script>
+	<script src="{% static 'third/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'third/js/stellar.js' %}"></script>
+	<script src="{% static 'third/js/countdown.js' %}"></script>
+	<script src="{% static 'third/vendors/nice-select/js/jquery.nice-select.min.js' %}"></script>
+	<script src="{% static 'third/vendors/owl-carousel/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'third/js/owl-carousel-thumb.min.js' %}"></script>
+	<script src="{% static 'third/js/jquery.ajaxchimp.min.js' %}"></script>
+	<script src="{% static 'third/vendors/counter-up/jquery.counterup.js' %}"></script>
+	<script src="{% static 'third/js/mail-script.js' %}"></script>
+    <!-- card flip -->
+    <script>
+    $('.hover').hover(function(){
+      $(this).addClass('flip');
+    },function(){
+      $(this).removeClass('flip');
+    });
+    $('.click').toggle(function(){
+      $(this).addClass('flipswing');
+    },function(){
+      $(this).removeClass('flipswing');
+    });
+    </script>
+	<!--gmaps Js-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+	<script src="{% static 'third/js/gmaps.min.js' %}"></script>
+	<script src="{% static 'third/js/theme.js' %}"></script>
+</body>
+
+</html>

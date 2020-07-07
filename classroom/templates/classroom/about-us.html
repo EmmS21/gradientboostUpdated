@@ -1,0 +1,403 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="{% static 'img/favicon-transparent.png' %}" type="image/png">
+	<title>Gradient Boost</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="{% static 'third/css/bootstrap.css' %}">
+	<link rel="stylesheet" href="{% static 'third/vendors/linericon/style.css' %}">
+	<link rel="stylesheet" href="{% static 'third/css/font-awesome.min.css' %}">
+	<link rel="stylesheet" href="{% static 'third/vendors/owl-carousel/owl.carousel.min.css' %}">
+	<link rel="stylesheet" href="{% static 'third/vendors/lightbox/simpleLightbox.css' %}">
+	<link rel="stylesheet" href="{% static 'third/vendors/nice-select/css/nice-select.css' %}">
+	<link rel="stylesheet" href="{% static 'third/vendors/animate-css/animate.css' %}">
+	<!-- main css -->
+	<link rel="stylesheet" href="{% static 'third/css/style.css' %}">
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-65796754-4"></script>
+    <!-- jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-65796754-4');
+	</script>
+    <style>
+       .accordion a {
+      position: relative;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      width: 100%;
+      padding: 0.2rem 4rem 5rem 1rem;
+      color: #7288a2;
+      font-size: 25px;
+      font-weight: 400;
+      border-bottom: 1px solid #e5e5e5;
+      text-align:center;
+    }
+    .accordion a:hover,
+    .accordion a:hover::after {
+      cursor: pointer;
+      color: #03b5d2;
+      text-align:center;
+    }
+    .accordion a:hover::after {
+      text-align:center;
+    }
+    .accordion a.active {
+      color: #03b5d2;
+      text-align:center;
+    }
+    .accordion a::after {
+      font-family: 'Ionicons';
+      position: absolute;
+      font-size: 1rem;
+      color: #7288a2;
+      padding: 5px;
+      width: 30px;
+      height: 30px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      text-align: center;
+    }
+    .accordion a.active::after {
+      font-family: 'Ionicons';
+      color: #03b5d2;
+      text-align:center;
+    }
+    .accordion .content {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      clear: both;
+      -webkit-transition: all 0.2s ease 0.15s;
+      -o-transition: all 0.2s ease 0.15s;
+      transition: all 0.2s ease 0.15s;
+      display: block;
+      padding: 25px 25px 14px;
+      text-align:center;
+
+    }
+    .accordion .content p {
+    display: block;
+    padding: 25px 25px 14px;
+    }
+    .accordion .content.active {
+      opacity: 1;
+      max-height: 100%;
+      -webkit-transition: all 0.35s ease 0.15s;
+      -o-transition: all 0.35s ease 0.15s;
+      transition: all 0.35s ease 0.15s;
+      display: block;
+      padding: 25px 25px 14px;
+      text-align:center;
+    }
+    .accordion .normal {
+    font-size: 20px;
+    }
+    </style>
+
+<body>
+
+    <!--================ Start Header Menu Area =================-->
+	<header class="header_area">
+		<div class="header-top">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-6 col-sm-6 col-4 header-top-left">
+						<a href=#>
+							<span class="lnr lnr-envelope"></span>
+							<span class="text">
+								<span class="text">emmanuels@thegradientboost.com</span>
+							</span>
+						</a>
+					</div>
+					<div class="col-lg-6 col-sm-6 col-8 header-top-right">
+						<a href="https://techmentor.typeform.com/to/PpUG1P" class="primary-btn text-uppercase enroll">Enroll Today</a>
+<!--						<a href="{% url 'signup' %}" class="text-uppercase">Enroll Today</a>-->
+                        <a href="{% url 'login' %}" class="text-uppercase">Login</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="main_menu">
+
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+                    <img src="{% static 'second/images/learning-logo-transparent.png' %}" width="20%">
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+						<ul class="nav navbar-nav menu_nav ml-auto">
+                            <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'course_details' %}"> About the Course</a></li>
+							<li class="nav-item"><a class="nav-link" href="{% url 'gradient_students' %}"> Meet our Students</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://medium.com/gradientboost"> Blog</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://learningdesk.thegradientboost.com/">Learning Desk</a></li>
+							<li class="nav-item"><a class="nav-link" href="{% url 'faqs' %}">FAQs</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+    <!--================ End Header Menu Area =================-->
+
+    <!--================Home Banner Area =================-->
+    <section class="banner_area">
+        <div class="banner_inner d-flex align-items-center">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="banner_content text-center">
+                            <h2>Learn More about our mentors</h2>
+                            <p>Learn more about our mentors.</p>
+                            <div class="page_link">
+                                <a href="{% url 'home' %}">Home</a>
+                                <a href="{% url 'about' %}">About</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================End Home Banner Area =================-->
+
+    <!--================ Start Instructor Area =================-->
+    <div class="instructors_area lite_bg">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="main_title">
+                        <h2>Our Mentors</h2>
+                        <p>Meet some of our mentors.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- single-instructor -->
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single_instructor">
+                        <div class="author">
+                            <img src="{% static 'third/img/instructors/rofhiwa.jpg' %}" alt="">
+                        </div>
+                        <div class="author_decs">
+                            <h4>Rofhiwa Nemudzivhadi</h4><br>
+                            <p><b>Country: South Africa</b></p>
+                            <p class="profession">Data Scientist @ Nielsen</p>
+                            <p>Rofhiwa Nemudzivhadi is a data scientist with a background in Statistics and Information Systems</p>
+                            <div class="social_icons">
+                                <center><a href="https://za.linkedin.com/in/rofhiwa-nemudzivhadi-915362104"><i class="fa fa-linkedin"></i></a></center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- single-instructor -->
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single_instructor">
+                        <div class="author">
+                            <img src="{% static 'third/img/instructors/czanik.jpg' %}" alt="">
+                        </div>
+                        <div class="author_decs">
+                            <h4>Robert Czanik</h4><br>
+                            <p><b>Country: South Africa</b></p>
+                            <p class="profession">Data Scientist @ ThoroughTec Simulation</p>
+                            <p>Robert Czanik is a Data Scientist with a PhD in Space Research (Astrophysics)</p>
+                            <div class="social_icons">
+                                <center><a href="https://za.linkedin.com/in/rjczanik"><i class="fa fa-linkedin"></i></a></center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- single-instructor -->
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single_instructor">
+                        <div class="author">
+                            <img src="{% static 'third/img/instructors/davidpraise.jpg' %}" alt="">
+                        </div>
+                        <div class="author_decs">
+                            <h4>Davidpraise Kalu</h4><br>
+                            <p><b>Country: Serbia</b></p>
+                            <p class="profession">Data Scientists @ Data Hacker</p>
+                            <p>David Praise Chukwuma Kalu is a Data Scientist at DataHacker in Serbia. He is also completing his studies in Software and Data Engineering and was voted as one of the 20 most inspiring Data Scientists to follow on Twitter in 2020 by AI Time Journal</p>
+                            <div class="social_icons">
+                                <center><a href="https://rs.linkedin.com/in/davidpraise"><i class="fa fa-linkedin"></i></a></center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--================ End Instructor Area =================-->
+
+    <div class="instructors_area lite_bg">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="main_title">
+                        <h2>Our Team</h2>
+                        <p>Meet the team</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- single-instructor -->
+                <div class="col-lg-6 col-sm-6">
+                    <div class="single_instructor">
+                        <div class="author">
+                            <img src="{% static 'third/img/team/logo.png' %}" alt="">
+                        </div>
+                        <div class="author_decs">
+                            <h4>Emmanuel Sibanda</h4><br>
+                            <p class="profession">Co-Founder</p>
+                            <div class="social_icons">
+                                <center><a href="https://www.linkedin.com/in/emmanuel-sibanda-42b49176/"><i class="fa fa-linkedin"></i></a></center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- single-instructor -->
+                <div class="col-lg-6 col-sm-6">
+                    <div class="single_instructor">
+                        <div class="author">
+                            <img src="{% static 'third/img/team/jasmine3.jpg' %}" alt="">
+                        </div>
+                        <div class="author_decs">
+                            <h4>Jasmine Desvarieux</h4><br>
+                            <p class="profession">Co-Founder</p>
+                            <div class="social_icons">
+                                <center><a href="https://www.linkedin.com/in/jasminedes/"><i class="fa fa-linkedin"></i></a></center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--================ Start Department Area =================-->
+    <div class="department_area section_gap">
+        <div class="dpmt_right">
+            <center><h1>How The Gradient Boost works</h1></center>
+        </div>
+	</div>
+        <div class="accordion">
+            <div class="accordion-item">
+                <a>Signup Process</a>
+                <div class="content">
+                    <p>As you go through the signup process we will ask you questions to better understand you, how you would like to pay our fee and to understand when and how to reach out to you to explain how The Gradient Boost works, get a deeper understanding of your goals and aspirations and give you an opportunity to ask any questions to help you make a more informed decision.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <a>Mentor Guided Learning</a>
+                <div class="content">
+                    <p>Once classes commence you will have access to two live weekly mentorship sessions with Data Scientists from across Africa. Your mentors will walk you through some of the issues you are struggling with and explain concepts in our curriculum to you in a more practical way to ensure understanding. These tutorials are recorded and shared with you, giving you a lifetime of videos that you can always go back to in order to revise things you may have forgotten.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <a>Weekend Workshops</a>
+                <div class="content">
+                    <p>We have workshops every weekend, the majority of which are only open to our registered students. These workshops are led by either your workshop mentor (a Data Scientist), or guest Data Scientists, recruiters and other specialists from around the world to either give you a practical workshop on a useful skill or tool that isn't included in the core curriculum (e.g Tableau or Web Scraping) or to walk you through a case study or interview questions to expect in a Data Science interview.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <a>Certification</a>
+                <div class="content">
+                    <p>Upon successful completion of our course you will receive a digitally shareable certificate signed off by atleast 4 Data Scientists based on your assignments and project submission. Through our partnership with Diwala the certificate is backed by the blockchain.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <a>Accountability</a>
+                <div class="content">
+                    <p>We help ensure that you are keeping up with your course progress. Since our Introduction to Data Science course is self-paced you will have an accountability partner to help you define a weekly study schedule and to ensure that you are not falling behind. You will also a weekly catchup call to understand any major concerns you have about the course and your progress in general.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <a>Data Science portfolio</a>
+                <div class="content">
+                    <p>As part of the curriculum, we will help you start building up your data science portfolio with projects and case studies tailored to your interests. This will help showcase your skills to potential employers.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <a>A community of learners</a>
+                <div class="content">
+                    <p>Through our Slack channel you will be able to interact with other learners and mentors to not only keep you motivated and learning but to create networking opportunities.</p>
+                </div>
+            </div>
+        </div>
+
+    <!--================ Frequently Asked Questions =================-->
+
+
+    <!--================ End Testimonial Area =================-->
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="e4a2d467-23ba-4bb9-a96d-b55981ad90b3";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+
+
+
+    <!--================ Start footer Area  =================-->
+    <footer class="footer-area section_gap">
+        <div class="container">
+            <div class="row footer-bottom d-flex justify-content-between">
+                <p class="col-lg-8 col-sm-12 footer-text m-0 text-white"><strong>Built by <a href="http://hooros.co.za/">Hooros Digital</a></strong> GradientBoost &copy; Copyright 2020</p>
+                <div class="col-lg-4 col-sm-12 footer-social">
+					<a href="https://www.facebook.com/thegradientboost/"><i class="fa fa-facebook"></i></a>
+					<a href="https://twitter.com/gradient_the"><i class="fa fa-twitter"></i></a>
+					<a href="https://www.linkedin.com/company/37551624/"><i class="fa fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/the_gradient_boost/"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/channel/UC329k8dt-DbfbUINUKjtr8A?view_as=subscriber"><i class="fa fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--================ End footer Area  =================-->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="{% static 'third/js/jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static 'third/js/popper.js' %}"></script>
+	<script src="{% static 'third/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'third/js/stellar.js' %}"></script>
+	<script src="{% static 'third/js/countdown.js' %}"></script>
+	<script src="{% static 'third/vendors/nice-select/js/jquery.nice-select.min.js' %}"></script>
+	<script src="{% static 'third/vendors/owl-carousel/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'third/js/owl-carousel-thumb.min.js' %}"></script>
+	<script src="{% static 'third/js/jquery.ajaxchimp.min.js' %}"></script>
+	<script src="{% static 'third/vendors/counter-up/jquery.counterup.js' %}"></script>
+	<script src="{% static 'third/js/mail-script.js' %}"></script>
+	<!--gmaps Js-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+	<script src="{% static 'third/js/gmaps.min.js' %}"></script>
+	<script src="{% static 'third/js/theme.js' %}"></script>
+    <script>
+    const items = document.querySelectorAll(".accordion a");
+    function toggleAccordion(){
+    this.classList.toggle('active');
+    this.nextElementSibling.classList.toggle('active');
+    }
+    items.forEach(item => item.addEventListener('click', toggleAccordion));
+    </script>
+</body>
+
+</html>
