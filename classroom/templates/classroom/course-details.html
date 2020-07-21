@@ -151,8 +151,8 @@
 						</a>
 					</div>
 					<div class="col-lg-6 col-sm-6 col-8 header-top-right">
-						<a href="https://techmentor.typeform.com/to/PpUG1P" class="primary-btn text-uppercase enroll">Enroll Today</a> <!-- {% url 'signup' %} -->
-<!--						<a href="{% url 'signup' %}" class="text-uppercase">Enroll</a>-->
+<!--						<a href="https://techmentor.typeform.com/to/PpUG1P" class="primary-btn text-uppercase enroll">Enroll Today</a> &lt;!&ndash; {% url 'signup' %}  &ndash;&gt;-->
+						<a href="{% url 'signup' %}" class="text-uppercase">Enroll</a>
                         <a href="{% url 'login' %}" class="text-uppercase">Login</a>
 					</div>
 				</div>
@@ -461,9 +461,6 @@
                                     <option value="1">Two Months</option>
                                     <option value="2">Three Months</option>
                                     <option value="3">Four Months</option>
-                                    <option value="4">Five Months</option>
-                                    <option value="5">Six Months</option>
-                                    <option value="6">Seven Months</option>
 <!--                                    <option value="7">Eight Months</option>-->
 <!--                                    <option value="8">Nine Months</option>-->
 <!--                                    <option value="9">Ten Months</option>-->
@@ -473,7 +470,7 @@
                         <li>
                             <a class="justify-content-between d-flex" href="#">
                                 <p>Available Seats </p>
-                                <span>0</span>
+                                <span>15</span>
                             </a>
                         </li>
                         <li>
@@ -482,20 +479,20 @@
                                 <span>3 - 4 Months</span>
                             </a>
                         </li>
+<!--                        <li>-->
+<!--                            <a class="justify-content-between d-flex" href="#">-->
+<!--                                <span>Enrollments for July are currently closed</span>-->
+<!--                            </a>-->
+<!--                        </li>-->
                         <li>
                             <a class="justify-content-between d-flex" href="#">
-                                <span>Enrollments for July are currently closed</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="justify-content-between d-flex" href="#">
-                                <p>Commencement Date </p>
-                                <span>13 July 2020</span>
+                                <p>Next Cohort</p>
+                                <span>September 2020</span>
                             </a>
                         </li>
                     </ul>
+                    <a href="{% url 'signup' %}" class="primary-btn text-uppercase enroll">Enroll Today</a>
 <!--                    <a href="https://techmentor.typeform.com/to/PpUG1P" class="primary-btn text-uppercase enroll">Enroll Today</a>-->
-                    <a href="https://techmentor.typeform.com/to/PpUG1P" class="primary-btn text-uppercase enroll">Enroll Today</a>
                 </div>
             </div>
         </div>
@@ -513,7 +510,7 @@
                         <thead>
                         <tr>
                             <th>Payment Due Date</th>
-                            <p>Select your currency to view payment plan</p>
+                            <p>If you cannot see any amounts, please select your currency again</p>
                             <th>Amount</th>
                         </tr>
                         </thead>
@@ -544,7 +541,7 @@
                         <thead>
                         <tr>
                             <th>Payment Due Date</th>
-                            <p>Select your currency to view payment plan</p>
+                            <p>If you cannot see any amounts, please select your currency again</p>
                             <th>Amount</th>
                         </tr>
                         </thead>
@@ -573,7 +570,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Payment over four months</h4>
-                    <p>Select your currency to view payment plan</p>
+                    <p>If you cannot see any amounts, please select your currency again</p>
                 </div>
                 <div class="modal-body">
                     <table>
@@ -600,148 +597,6 @@
                             <td data-column="Due">Fourth Month</td>
                             <td data-column="Amount"><input type="text" id="4mfourth" value="" readonly="readonly" size="8" style="background-image: url('http://placehold.it/350x25/F9F9F9');-webkit-appearance: none;border: none"/></td>
                         </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- five months -->
-    <div class="modal fade" id="FiveMonthsModal" role="dialog">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Payment over five months</h4>
-                    <p>Select your currency to view payment plan</p>
-                </div>
-                <div class="modal-body">
-                    <table>
-                        <thead>
-                        <tr>
-                            <th>Payment Due Date</th>
-                            <th>Amount</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td data-column="Due">First Month</td>
-                            <td data-column="Amount"><div class="input-group-addon currency-symbol" style="display: flex;justify-content: center;align-items: center;height: 50px;">$</div><input type="text" id="5mfirst" value="" readonly="readonly" size="8" style="background-image: url('http://placehold.it/350x25/F9F9F9');-webkit-appearance: none;border: none"/></td>
-                        </tr>
-                        <tr>
-                            <td data-column="Due">Second Month</td>
-                            <td data-column="Amount"><input type="text" id="5msecond" value="" readonly="readonly" size="8" style="background-image: url('http://placehold.it/350x25/F9F9F9');-webkit-appearance: none;border: none"/></td>
-                        </tr>
-                        <tr>
-                            <td data-column="Due">Third Month</td>
-                            <td data-column="Amount"><input type="text" id="5mthird" value="" readonly="readonly" size="8" style="background-image: url('http://placehold.it/350x25/F9F9F9');-webkit-appearance: none;border: none"/></td>
-                        </tr>
-                        <tr>
-                            <td data-column="Due">Fourth Month</td>
-                            <td data-column="Amount"><input type="text" id="5mfourth" value="" readonly="readonly" size="8" style="background-image: url('http://placehold.it/350x25/F9F9F9');-webkit-appearance: none;border: none"/></td>
-                        </tr>
-                        <tr>
-                            <td data-column="Due">Fifth Month</td>
-                            <td data-column="Amount"><input type="text" id="5mfive" value="" readonly="readonly" size="8" style="background-image: url('http://placehold.it/350x25/F9F9F9');-webkit-appearance: none;border: none"/></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- six months -->
-    <div class="modal fade" id="SixMonthsModal" role="dialog">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Payment over six months</h4>
-                    <p>Select your currency to view payment plan</p>
-                </div>
-                <div class="modal-body">
-                    <table>
-                        <thead>
-                        <tr>
-                            <th>Payment Due Date</th>
-                            <th>Amount</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td data-column="Due">First Month</td>
-                            <td data-column="Amount"><div class="input-group-addon currency-symbol" style="display: flex;justify-content: center;align-items: center;height: 50px;">$</div><input type="text" id="6mfirst" value="" readonly="readonly" size="8" style="background-image: url('http://placehold.it/350x25/F9F9F9');-webkit-appearance: none;border: none"/></td>
-                        </tr>
-                        <tr>
-                            <td data-column="Due">Second Month</td>
-                            <td data-column="Amount"><input type="text" id="6msecond" value="" readonly="readonly" size="8" style="background-image: url('http://placehold.it/350x25/F9F9F9');-webkit-appearance: none;border: none"/></td>
-                        </tr>
-                        <tr>
-                            <td data-column="Due">Third Month</td>
-                            <td data-column="Amount"><input type="text" id="6mthird" value="" readonly="readonly" size="8" style="background-image: url('http://placehold.it/350x25/F9F9F9');-webkit-appearance: none;border: none"/></td>
-                        </tr>
-                        <tr>
-                            <td data-column="Due">Fourth Month</td>
-                            <td data-column="Amount"><input type="text" id="6mfourth" value="" readonly="readonly" size="8" style="background-image: url('http://placehold.it/350x25/F9F9F9');-webkit-appearance: none;border: none"/></td>
-                        </tr>
-                        <tr>
-                            <td data-column="Due">Fifth Month</td>
-                            <td data-column="Amount"><input type="text" id="6mfifth" value="" readonly="readonly" size="8" style="background-image: url('http://placehold.it/350x25/F9F9F9');-webkit-appearance: none;border: none"/></td>
-                        </tr>
-                        <tr>
-                            <td data-column="Due">Sixth Month</td>
-                            <td data-column="Amount"><input type="text" id="6msixth" value="" readonly="readonly" size="8" style="background-image: url('http://placehold.it/350x25/F9F9F9');-webkit-appearance: none;border: none"/></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- seven months -->
-    <div class="modal fade" id="SevenMonthsModal" role="dialog">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Payment over seven months</h4>
-                    <p>Select your currency to view payment plan</p>
-                </div>
-                <div class="modal-body">
-                    <table>
-                        <thead>
-                        <tr>
-                            <th>Payment Due Date</th>
-                            <th>Amount</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td data-column="Due">First Month</td>
-                            <td data-column="Amount"><div class="input-group-addon currency-symbol" style="display: flex;justify-content: center;align-items: center;height: 50px;">$</div><input type="text" id="7mfirst" value="" readonly="readonly" size="8" style="background-image: url('http://placehold.it/350x25/F9F9F9');-webkit-appearance: none;border: none"/></td>
-                        </tr>
-                        <tr>
-                            <td data-column="Due">Second Month</td>
-                            <td data-column="Amount"><input type="text" id="7msecond" value="" readonly="readonly" size="8" style="background-image: url('http://placehold.it/350x25/F9F9F9');-webkit-appearance: none;border: none"/></td>
-                        </tr>
-                        <tr>
-                            <td data-column="Due">Third Month</td>
-                            <td data-column="Amount"><input type="text" id="7mthird" value="" readonly="readonly" size="8" style="background-image: url('http://placehold.it/350x25/F9F9F9');-webkit-appearance: none;border: none"/></td>
-                        </tr>
-                        <tr>
-                            <td data-column="Due">Fourth Month</td>
-                            <td data-column="Amount"><input type="text" id="7mfourth" value="" readonly="readonly" size="8" style="background-image: url('http://placehold.it/350x25/F9F9F9');-webkit-appearance: none;border: none"/></td>
-                        </tr>
-                        <tr>
-                            <td data-column="Due">Fifth Month</td>
-                            <td data-column="Amount"><input type="text" id="7mfifth" value="" readonly="readonly" size="8" style="background-image: url('http://placehold.it/350x25/F9F9F9');-webkit-appearance: none;border: none"/></td>
-                        </tr>
-                        <tr>
-                            <td data-column="Due">Sixth Month</td>
-                            <td data-column="Amount"><input type="text" id="7msixth" value="" readonly="readonly" size="8" style="background-image: url('http://placehold.it/350x25/F9F9F9');-webkit-appearance: none;border: none"/></td>
-                        </tr>
-                        <tr>
-                            <td data-column="Due">Seventh Month</td>
-                            <td data-column="Amount"><input type="text" id="7mseventh" value="" readonly="readonly" size="8" style="background-image: url('http://placehold.it/350x25/F9F9F9');-webkit-appearance: none;border: none"/></td>
-                        </tr>
-
                         </tbody>
                     </table>
                 </div>

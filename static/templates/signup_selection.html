@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% block extracss %}
+<style>
+
+
+.button {
+  box-sizing: border-box;
+  height: 50px;
+  max-width:100%;
+  max-height: 100%;
+  display: table;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.55);
+  -webkit-transition: background .5s;
+  transition: background .5s;
+  cursor: pointer;
+}
+.button span {
+  max-width: 100%;
+  max-height: 100%;
+  padding: 20px;
+  color: #2D3142;
+  box-shadow: 0 0 0 3px #2D3142 inset;
+  background: transparent;
+}
+.button .away {
+  max-width: 100%;
+  max-height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.button .over {
+  max-width: 100%;
+  max-height: 100%;
+  display: none;
+  text-decoration:none;
+}
+.button:hover span.away {
+  max-width: 100%;
+  max-height: 100%;
+  display: none;
+}
+.button:hover span.over {
+  max-width: 100%;
+  max-height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: white;
+  box-shadow: none;
+}
+.button:hover {
+  background: #2D3142;
+  text-decoration:none;
+  max-width:100%;
+  max-height: 100%;
+}
+
+</style>
+{% endblock extracss %}
+
+ {% block extra_head_tags %}
+ <!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '688087088610267');
+  fbq('track', 'PageView');
+</script>
+ <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=688087088610267&ev=PageView&noscript=1"/></noscript>
+<!-- End Facebook Pixel Code -->
+ {% endblock %}
+{% block content %}
+
+<div class="container">
+  <div>
+    <h2 style = "background: linear-gradient(to right, black , yellow);-webkit-background-clip: text;-webkit-text-fill-color: transparent;font-size: 3vw;">Kick start your career with Gradient Boost</h2>
+    <h3 style = "my-5"><bold>Select the type of account you would like to create</bold></h3>
+  </div>
+  <div class="row mt-5">
+    <div class="col-3"></div>
+    <div class="col-4">
+      <a class="button" href="{% url 'student_signup' %}" >
+        <span class="away">Student</span>
+        <span class="over">SignUp</span>
+      </a>
+    </div>
+    <div class="col-4">
+      <a class="button" href="{% url 'teacher_signup' %}">
+        <span class="away">Mentor</span>
+        <span class="over">SignUp</span>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}
+
+
+{% comment %} <div style="my-5 text-center"> {% endcomment %}
+
+{% comment %} <a href="{% url 'student_signup' %}" class="btn btn-student btn-lg" role="button" style = "-webkit-background-clip: text;-webkit-text-fill-color: transparent;font-size: 2vw;position:relative;max-width:100%;">I'm a student</a>
+  <a href="{% url 'teacher_signup' %}" class="btn btn-teacher btn-lg" role="button" style = "-webkit-background-clip: text;-webkit-text-fill-color: transparent;font-size: 2vw;position:relative;">I'm a mentor</a> {% endcomment %}
+{% comment %} </div> {% endcomment %}
+
+{% comment %} <div class='my-5'>
+  <h3>Hover over the button!</h3>
+  <a class="button">
+    <span class="away">Download</span>
+    <span class="over">File Size: 30MB</span>
+  </a>
+
+</div> {% endcomment %}

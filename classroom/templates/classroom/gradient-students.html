@@ -18,6 +18,9 @@
 	<link rel="stylesheet" href="{% static 'third/vendors/animate-css/animate.css' %}">
 	<!-- main css -->
 	<link rel="stylesheet" href="{% static 'third/css/style.css' %}">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-65796754-4"></script>
 	<script>
 	window.dataLayer = window.dataLayer || [];
@@ -100,7 +103,18 @@
             padding: 50px;
             }
     </style>
-
+    <style>
+        .selection {
+          padding: 5px 20px;
+          border: none;
+          border-bottom: 1px solid #e4e4e4;
+          font-size: 1rem;
+          outline: 0;
+          width: 100%;
+          box-sizing: border-box;
+        }
+    </style>
+</head>
 <body>
 
     <!--================ Start Header Menu Area =================-->
@@ -186,6 +200,18 @@
                     </div>
                 </div>
             </div>
+            </section>
+            <!-- select cohort to show learners -->
+            <center><h1>Select Cohort</h1></center>
+            <select id="select_box" class="selection">
+                <option>select a option</option>
+                <option value="a">18 May 2020</option>
+                <option value="b">13 July 2020</option>
+<!--                <option value="c">c</option>-->
+<!--                <option value="d">d</option>-->
+            </select>
+            <div id="a" class="hide">
+                <!-- may cohort -->
             <div class="row" style="width:100%;left:0;top:0;margin:0;padding:0;">
                 <!-- single-instructor -->
                 <div class="col-lg-2" style="margin:25px;">
@@ -346,6 +372,440 @@
                     </div>
                 </div>
             </div>
+            </div>
+            <div id="b" class="hide">
+                <!-- may cohort -->
+                <div class="row" style="width:100%;left:0;top:0;margin:0;padding:0;">
+                <!-- single-instructor -->
+                <div class="col-lg-2" style="margin:25px;">
+                    <div class="hover panel">
+                        <div class="front">
+                            <div class="single_instructor">
+                                <div class="author">
+                                    <img src="{% static 'second/images/people/students/mariam.jpg' %}" style="max-width:75%;max-height:75%;" alt="">
+                                </div>
+                                <div class="author_decs">
+                                    <h4>Mariam Okereafor</h4><br>
+                                    <p class="profession">System Implementation Engineer</p>
+                                    <p>Nigeria</p>
+                                    <p>July 2020 Introduction to DS cohort</p>
+                                    <div class="social_icons">
+                                        <center><a href="https://www.linkedin.com/in/mariam-okereafor-9b2b87169/"><i class="fa fa-linkedin"></i></a></center>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="single_instructor">
+                                <div class="author_decs">
+                                    <p>Mariam is a System Implementation Engineer at Current-Link Systems. Mariam has an academic background in Computer Science.</p>
+                                    <div class="social_icons">
+                                        <a href="https://www.linkedin.com/in/mariam-okereafor-9b2b87169/"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- single-instructor -->
+                <div class="col-lg-2" style="margin:25px;">
+                    <div class="hover panel">
+                        <div class="front">
+                            <div class="single_instructor">
+                                <div class="author">
+                                    <img src="{% static 'second/images/people/students/djangoran.jpg' %}" style="max-width:75%;max-height:75%;" alt="">
+                                </div>
+                                <div class="author_decs">
+                                    <h4>Djangoran Ezoa Avotchi Michel</h4><br>
+                                    <p class="profession">Licensed Aircraft Engineer</p>
+                                    <p>Côte d'Ivoire</p>
+                                    <p>July 2020 Introduction to DS cohort</p>
+                                    <div class="social_icons">
+                                        <center><a href="https://www.linkedin.com/in/ezoa-avotchi-michel-djangoran-a10815109/"><i class="fa fa-linkedin"></i></a></center>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="single_instructor">
+                                <div class="author_decs">
+                                    <p>Djangoran is a Licensed Aircraft Engineer with an academic background in Mathematics.</p>
+                                    <div class="social_icons">
+                                        <a href="https://www.linkedin.com/in/ezoa-avotchi-michel-djangoran-a10815109/"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- single-instructor -->
+                <div class="col-lg-2" style="margin:25px;">
+                    <div class="hover panel">
+                        <div class="front">
+                            <div class="single_instructor">
+                                <div class="author">
+                                    <img src="{% static 'second/images/people/students/letlhogile.jpg' %}" style="max-width:75%;max-height:75%;" alt="">
+                                </div>
+                                <div class="author_decs">
+                                    <h4>Letlhogile Motaung</h4><br>
+                                    <p class="profession">Finance Manager</p>
+                                    <p>South Africa</p>
+                                    <p>July 2020 Introduction to DS cohort</p>
+                                    <div class="social_icons">
+                                        <center><a href="https://www.linkedin.com/in/letlhogile-motaung-b4248121/"><i class="fa fa-linkedin"></i></a></center>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="single_instructor">
+                                <div class="author_decs">
+                                    <p>Letlhogile is a Finance Manager at a social impact advisory and consulting organization in South Africa. She has an academic background in Accounting, worked as an Investment Accountant at the Development Bank of Southern Africa and previously interned at Microsoft.</p>
+                                    <p>Ajibola is working towards transitioning to a Data Analyst.</p>
+                                    <div class="social_icons">
+                                        <a href="https://www.linkedin.com/in/letlhogile-motaung-b4248121/"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 " style="margin:25px;">
+                    <div class="hover panel">
+                        <div class="front">
+                            <div class="single_instructor">
+                                <div class="author">
+                                    <img src="{% static 'second/images/people/students/boipelo.jpg' %}" style="max-width:75%;max-height:75%;" alt="">
+                                </div>
+                                <div class="author_decs">
+                                    <h4>Boipelo Audrey Motsosi</h4><br>
+                                    <p class="profession">Digital Marketer</p>
+                                    <p>South Africa</p>
+                                    <p>July 2020 Introduction to DS cohort</p>
+                                    <div class="social_icons">
+                                        <a href="https://www.linkedin.com/in/boipelo-audrey-motsosi-55b29815b/"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="single_instructor">
+                                <div class="author_decs">
+                                    <p>Boipelo is a Digital Marketer at a global brand experience agency. She was previously elected into the Public Relations sub-committee of the United Nations Association of South Africa Global Speaker through.</p>
+                                    <div class="social_icons">
+                                        <a href="https://www.linkedin.com/in/boipelo-audrey-motsosi-55b29815b/"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2" style="margin:25px;">
+                    <div class="hover panel">
+                        <div class="front">
+                            <div class="single_instructor">
+                                <div class="author">
+                                    <img src="{% static 'second/images/people/students/tokolo.jpg' %}" style="max-width:75%;max-height:75%;" alt="">
+                                </div>
+                                <div class="author_decs">
+                                    <h4>Tokolo N Kashupi</h4><br>
+                                    <p class="profession">Data Management Analyst</p>
+                                    <p>Namibia</p>
+                                    <p>July 2020 Introduction to DS cohort</p>
+                                    <div class="social_icons">
+                                        <a href="https://www.linkedin.com/in/tokolo-n-kashupi-840358126/"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="single_instructor">
+                                <div class="author_decs">
+                                    <p>Tokolo is a Data Management Analyst. She previously interned at the Center for Business and Technology in Germany and has an academic background in Business Informatics.</p>
+                                    <div class="social_icons">
+                                        <a href="https://www.linkedin.com/in/tokolo-n-kashupi-840358126/"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2" style="margin:25px;">
+                    <div class="hover panel">
+                        <div class="front">
+                            <div class="single_instructor">
+                                <div class="author">
+                                    <img src="{% static 'second/images/people/students/zenzele.jpg' %}" style="max-width:75%;max-height:75%;" alt="">
+                                </div>
+                                <div class="author_decs">
+                                    <h4>Zenzele Ndlozi</h4><br>
+                                    <p class="profession">Network Marketer</p>
+                                    <p>South Africa</p>
+                                    <p>July 2020 Introduction to DS cohort</p>
+                                    <div class="social_icons">
+                                        <a href="https://www.linkedin.com/in/zenzele-ndlozi-51a585197/"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="single_instructor">
+                                <div class="author_decs">
+                                    <p>Zenzele is a network marketer at Clientele.</p>
+                                    <div class="social_icons">
+                                        <a href="https://www.linkedin.com/in/zenzele-ndlozi-51a585197/"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-lg-2" style="margin:25px;">
+                    <div class="hover panel">
+                        <div class="front">
+                            <div class="single_instructor">
+                                <div class="author">
+                                    <img src="{% static 'second/images/people/students/fisayo.jpg' %}" style="max-width:75%;max-height:75%;" alt="">
+                                </div>
+                                <div class="author_decs">
+                                    <h4>Fisayo Jassey Jabarr</h4><br>
+                                    <p class="profession">Information Management Specialist</p>
+                                    <p>Nigeria</p>
+                                    <p>July 2020 Introduction to DS cohort</p>
+                                    <div class="social_icons">
+                                        <a href="https://www.linkedin.com/in/fisayo-jassey-jabarr-787587141/"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="single_instructor">
+                                <div class="author_decs">
+                                    <p>Fisayo is an Information Management Specialist at the Food and Agriculture Organization of the United Nations with an academic background in Economics.</p>
+                                    <div class="social_icons">
+                                        <a href="https://www.linkedin.com/in/fisayo-jassey-jabarr-787587141/"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-lg-2" style="margin:25px;">
+                    <div class="hover panel">
+                        <div class="front">
+                            <div class="single_instructor">
+                                <div class="author">
+                                    <img src="{% static 'second/images/people/students/noxolo.jpg' %}" style="max-width:75%;max-height:75%;" alt="">
+                                </div>
+                                <div class="author_decs">
+                                    <h4>Noxolo Mabona</h4><br>
+                                    <p class="profession">Recent Graduate</p>
+                                    <p>South Africa</p>
+                                    <p>July 2020 Introduction to DS cohort</p>
+                                    <div class="social_icons">
+                                        <a href="https://www.linkedin.com/in/noxolo-mabona-3b539124/"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="single_instructor">
+                                <div class="author_decs">
+                                    <p>Noxolo recenlty graduated with a Mathematics degree from the University of Pretoria.</p>
+                                    <div class="social_icons">
+                                        <a href="https://www.linkedin.com/in/noxolo-mabona-3b539124/"><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--                    &lt;!&ndash; single-instructor &ndash;&gt;-->
+<!--                    <div class="col-lg-2" style="margin:25px;">-->
+<!--                        <div class="hover panel">-->
+<!--                            <div class="front">-->
+<!--                                <div class="single_instructor">-->
+<!--                                    <div class="author_decs">-->
+<!--                                        <h4>Test B</h4><br>-->
+<!--                                    <p>B</p>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                <div><h2>Option 3</h2></div>-->
+<!--                <div><h2>Option 4</h2></div>-->
+<!--                <div><h2>Option 5</h2></div>-->
+<!--                <div><h2>Option 6</h2></div>-->
+<!--                <div><h2>Option 7</h2></div>-->
+<!--                <div><h2>Option 8</h2></div>-->
+<!--            </ul>-->
+
+
+
+<!--            &lt;!&ndash; may cohort &ndash;&gt;-->
+<!--            <div class="row" style="width:100%;left:0;top:0;margin:0;padding:0;">-->
+<!--                &lt;!&ndash; single-instructor &ndash;&gt;-->
+<!--                <div class="col-lg-2" style="margin:25px;">-->
+<!--                    <div class="hover panel">-->
+<!--                        <div class="front">-->
+<!--                            <div class="single_instructor">-->
+<!--                                <div class="author">-->
+<!--                                    <img src="{% static 'second/images/people/students/benjamin.jpg' %}" style="max-width:75%;max-height:75%;" alt="">-->
+<!--                                </div>-->
+<!--                                <div class="author_decs">-->
+<!--                                    <h4>Benjamin Uneh</h4><br>-->
+<!--                                    <p class="profession">Business Development Officer</p>-->
+<!--                                    <p>Nigeria</p>-->
+<!--                                    <p>May 2020 Introduction to DS cohort</p>-->
+<!--                                    <div class="social_icons">-->
+<!--                                        <center><a href="https://www.linkedin.com/in/benjamin-uneh-9656a815a/"><i class="fa fa-linkedin"></i></a></center>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="back">-->
+<!--                            <div class="single_instructor">-->
+<!--                                <div class="author_decs">-->
+<!--                                    <p>Benjamin is a Business Development Officer at OPay. Benjamin has an academic background in Educational Technology.</p>-->
+<!--                                    <p> Country: Nigeria</p>-->
+<!--                                    <div class="social_icons">-->
+<!--                                        <a href="https://www.linkedin.com/in/benjamin-uneh-9656a815a/"><i class="fa fa-linkedin"></i></a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+<!--                    </div>-->
+<!--                </div>-->
+<!--                &lt;!&ndash; single-instructor &ndash;&gt;-->
+<!--                <div class="col-lg-2" style="margin:25px;">-->
+<!--                    <div class="hover panel">-->
+<!--                        <div class="front">-->
+<!--                            <div class="single_instructor">-->
+<!--                                <div class="author">-->
+<!--                                    <img src="{% static 'second/images/people/students/ritmwa.jpg' %}" style="max-width:75%;max-height:75%;" alt="">-->
+<!--                                </div>-->
+<!--                                <div class="author_decs">-->
+<!--                                    <h4>Ritmwa Bewarang</h4><br>-->
+<!--                                    <p class="profession">Student at the University of Jos</p>-->
+<!--                                    <p>Nigeria</p>-->
+<!--                                    <p>May 2020 Introduction to DS cohort</p>-->
+<!--                                    <div class="social_icons">-->
+<!--                                        <center><a href="https://www.linkedin.com/in/ritmwa-bewarang-ba1543174/"><i class="fa fa-linkedin"></i></a></center>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="back">-->
+<!--                            <div class="single_instructor">-->
+<!--                                <div class="author_decs">-->
+<!--                                    <p>Ritmwa Bewarang is a student at the University of Jos where she is currently pursuing a Bachelor of Science in Quantity Surveying.</p>-->
+<!--                                    <p> Country: Nigeria</p>-->
+<!--                                    <div class="social_icons">-->
+<!--                                        <a href="https://www.linkedin.com/in/ritmwa-bewarang-ba1543174/"><i class="fa fa-linkedin"></i></a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                &lt;!&ndash; single-instructor &ndash;&gt;-->
+<!--                <div class="col-lg-2" style="margin:25px;">-->
+<!--                    <div class="hover panel">-->
+<!--                        <div class="front">-->
+<!--                            <div class="single_instructor">-->
+<!--                                <div class="author">-->
+<!--                                    <img src="{% static 'second/images/people/students/akinloye.jpg' %}" style="max-width:75%;max-height:75%;" alt="">-->
+<!--                                </div>-->
+<!--                                <div class="author_decs">-->
+<!--                                    <h4>Akinloye Okunola</h4><br>-->
+<!--                                <p>May 2020 Introduction to DS cohort</p>-->
+<!--                                    <div class="social_icons">-->
+<!--                                        <center><a href="https://www.linkedin.com/in/akinloye-okunola-279695191/"><i class="fa fa-linkedin"></i></a></center>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="back">-->
+<!--                            <div class="single_instructor">-->
+<!--                                <div class="author_decs">-->
+<!--                                    <p>Akinloye Okunola is a Social Media Manager at Laifmedia. He completed a Bachelor of Science in Business Administration and Management at the University of Lagos.</p>-->
+<!--                                    <p>Ajibola is working towards transitioning to a Data Analyst.</p>-->
+<!--                                    <p> Country: Nigeria</p>-->
+<!--                                    <div class="social_icons">-->
+<!--                                        <a href="https://www.linkedin.com/in/akinloye-okunola-279695191/"><i class="fa fa-linkedin"></i></a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-lg-2 " style="margin:25px;">-->
+<!--                    <div class="hover panel">-->
+<!--                        <div class="front">-->
+<!--                            <div class="single_instructor">-->
+<!--                                <div class="author">-->
+<!--                                    <img src="{% static 'second/images/people/students/ajibola.jpg' %}" style="max-width:75%;max-height:75%;" alt="">-->
+<!--                                </div>-->
+<!--                                <div class="author_decs">-->
+<!--                                    <h4>Ajibola Lawal</h4><br>-->
+<!--                                    <p class="profession">Data Science Intern</p>-->
+<!--                                    <p>Nigeria</p>-->
+<!--                                    <p>May 2020 Introduction to DS cohort</p>-->
+<!--                                    <div class="social_icons">-->
+<!--                                        <a href="https://www.linkedin.com/in/jibzus/"><i class="fa fa-linkedin"></i></a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="back">-->
+<!--                            <div class="single_instructor">-->
+<!--                                <div class="author_decs">-->
+<!--                                    <p>Ajibola Lawal has a background in Computer Science and is currenlty an Intern Data Scientist at Lisabi Technologies.</p>-->
+<!--                                    <p>Ajibola previously worked as a Senior Strategy Associate and Product Team Lead at North East Children's Trust and Abalon Sports Multiservices respectively</p>-->
+<!--                                    <div class="social_icons">-->
+<!--                                        <a href="https://www.linkedin.com/in/jibzus/"><i class="fa fa-linkedin"></i></a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-lg-2" style="margin:25px;">-->
+<!--                    <div class="hover panel">-->
+<!--                        <div class="front">-->
+<!--                            <div class="single_instructor">-->
+<!--                                <div class="author">-->
+<!--                                    <img src="{% static 'second/images/people/students/gershinen.jpg' %}" style="max-width:75%;max-height:75%;" alt="">-->
+<!--                                </div>-->
+<!--                                <div class="author_decs">-->
+<!--                                    <h4>Gershinen Shanding</h4><br>-->
+<!--                                    <p class="profession">Youth Corps</p>-->
+<!--                                    <p>Nigeria</p>-->
+<!--                                    <p>May 2020 Introduction to DS cohort</p>-->
+<!--                                    <div class="social_icons">-->
+<!--                                        <a href="https://www.linkedin.com/in/pgshanding/detail/background-image/"><i class="fa fa-linkedin"></i></a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="back">-->
+<!--                            <div class="single_instructor">-->
+<!--                                <div class="author_decs">-->
+<!--                                    <p>Gershinen Shanding recently completed a BSc in Computer Science a course on Scientific computing and Python for Data Science through the WorldQuant University.</p>-->
+<!--                                    <p>Gershinen currently works as Youth Corp at the University of Abuja Teaching Hospital</p>-->
+<!--                                    <div class="social_icons">-->
+<!--                                        <a href="https://www.linkedin.com/in/pgshanding/detail/background-image/"><i class="fa fa-linkedin"></i></a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div> &lt;!&ndash; end &ndash;&gt;-->
         </div>
     </div>
     <!--================ End Instructor Area =================-->
@@ -395,6 +855,16 @@
       $(this).removeClass('flipswing');
     });
     </script>
+    <!--dropdown -->
+    <script>
+    $('#select_box').change(function () {
+    var select=$(this).find(':selected').val();
+    $(".hide").hide();
+    $('#' + select).show();
+	  }).change();
+
+
+    </script>
 	<!--gmaps Js-->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
 	<script src="{% static 'third/js/gmaps.min.js' %}"></script>
@@ -402,3 +872,46 @@
 </body>
 
 </html>
+
+
+
+
+<!--/* not need for uikit CSS use only this line */-->
+<!--.uk-switcher>:not(.uk-active) {-->
+<!--    display: none;-->
+<!--}-->
+
+<!-- /*-->
+<!-- * # Semantic UI - 2.3.3-->
+<!-- * https://github.com/Semantic-Org/Semantic-UI-->
+<!-- * http://www.semantic-ui.com/-->
+<!-- *-->
+<!-- */-->
+<!--/* Border-Box */-->
+<!--*,-->
+<!--.dropdown-wrapper:before,-->
+<!--.dropdown-wrapper:after {-->
+<!--  -webkit-box-sizing: inherit;-->
+<!--  box-sizing: inherit;-->
+<!--}-->
+<!--.dropdown-wrapper {-->
+<!--  -webkit-box-sizing: border-box;-->
+<!--  box-sizing: border-box;-->
+<!--}-->
+
+<!--/*-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+<!--        Links-->
+<!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/-->
+
+<!--.dropdown a {-->
+<!--  color: #4183C4;-->
+<!--  text-decoration: none;-->
+<!--}-->
+
+<!--.dropdown a:hover {-->
+<!--  color: #1e70bf;-->
+<!--  text-decoration: none;-->
+<!--}-->
+
+<!--.transition.slide.in,.transition[class*="slide down"].in{-webkit-animation-name:slideInY;animation-name:slideInY;-webkit-transform-origin:top center;transform-origin:top center}.transition[class*="slide up"].in{-webkit-animation-name:slideInY;animation-name:slideInY;-webkit-transform-origin:bottom center;transform-origin:bottom center}.transition[class*="slide left"].in{-webkit-animation-name:slideInX;animation-name:slideInX;-webkit-transform-origin:center right;transform-origin:center right}.transition[class*="slide right"].in{-webkit-animation-name:slideInX;animation-name:slideInX;-webkit-transform-origin:center left;transform-origin:center left}.transition.slide.out,.transition[class*="slide down"].out{-webkit-animation-name:slideOutY;animation-name:slideOutY;-webkit-transform-origin:top center;transform-origin:top center}.transition[class*="slide up"].out{-webkit-animation-name:slideOutY;animation-name:slideOutY;-webkit-transform-origin:bottom center;transform-origin:bottom center}.transition[class*="slide left"].out{-webkit-animation-name:slideOutX;animation-name:slideOutX;-webkit-transform-origin:center right;transform-origin:center right}.transition[class*="slide right"].out{-webkit-animation-name:slideOutX;animation-name:slideOutX;-webkit-transform-origin:center left;transform-origin:center left}@-webkit-keyframes slideInY{0%{opacity:0;-webkit-transform:scaleY(0);transform:scaleY(0)}100%{opacity:1;-webkit-transform:scaleY(1);transform:scaleY(1)}}@keyframes slideInY{0%{opacity:0;-webkit-transform:scaleY(0);transform:scaleY(0)}100%{opacity:1;-webkit-transform:scaleY(1);transform:scaleY(1)}}@-webkit-keyframes slideInX{0%{opacity:0;-webkit-transform:scaleX(0);transform:scaleX(0)}100%{opacity:1;-webkit-transform:scaleX(1);transform:scaleX(1)}}@keyframes slideInX{0%{opacity:0;-webkit-transform:scaleX(0);transform:scaleX(0)}100%{opacity:1;-webkit-transform:scaleX(1);transform:scaleX(1)}}@-webkit-keyframes slideOutY{0%{opacity:1;-webkit-transform:scaleY(1);transform:scaleY(1)}100%{opacity:0;-webkit-transform:scaleY(0);transform:scaleY(0)}}@keyframes slideOutY{0%{opacity:1;-webkit-transform:scaleY(1);transform:scaleY(1)}100%{opacity:0;-webkit-transform:scaleY(0);transform:scaleY(0)}}@-webkit-keyframes slideOutX{0%{opacity:1;-webkit-transform:scaleX(1);transform:scaleX(1)}100%{opacity:0;-webkit-transform:scaleX(0);transform:scaleX(0)}}@keyframes slideOutX{0%{opacity:1;-webkit-transform:scaleX(1);transform:scaleX(1)}100%{opacity:0;-webkit-transform:scaleX(0);transform:scaleX(0)}}-->
+<!-- -->

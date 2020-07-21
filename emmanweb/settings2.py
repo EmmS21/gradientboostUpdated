@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'crispy_forms',
     'classroom',
+    'django.contrib.sites',
     # 'classroom.apps.ClassroomConfig',
     # 'registration',
 ]
